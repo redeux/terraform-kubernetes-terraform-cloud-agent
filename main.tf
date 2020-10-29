@@ -10,15 +10,15 @@ resource "kubernetes_cluster_role" "tfc_agent_role" {
   }
 
   rule {
-    api_groups = ["","apps","autoscaling","batch","extensions","policy","rbac.authorization.k8s.io"]
-    resources  = ["componentstatuses","configmaps","daemonsets","deployments","events","endpoints","horizontalpodautoscalers","ingress","jobs","limitranges","namespaces","nodes","pods","persistentvolumes","persistentvolumeclaims","resourcequotas","replicasets","replicationcontrollers","serviceaccounts","services"]
+    api_groups = ["", "apps", "autoscaling", "batch", "extensions", "policy", "rbac.authorization.k8s.io"]
+    resources  = ["componentstatuses", "configmaps", "daemonsets", "deployments", "events", "endpoints", "horizontalpodautoscalers", "ingress", "jobs", "limitranges", "namespaces", "nodes", "pods", "persistentvolumes", "persistentvolumeclaims", "resourcequotas", "replicasets", "replicationcontrollers", "serviceaccounts", "services"]
     verbs      = ["*"]
   }
 }
 
 resource "kubernetes_service_account" "tfc_agent_service_account" {
   metadata {
-    name = "terraform-cloud-agent"
+    name      = "terraform-cloud-agent"
     namespace = var.namespace
   }
 }
@@ -82,6 +82,7 @@ resource "kubernetes_deployment" "tfc_agent" {
     selector {
       match_labels = {
         "app.kubernetes.io/name"       = "terraform-cloud-agent"
+        "app.kubernetes.io/version"    = local.version
         "app.kubernetes.io/managed-by" = "terraform"
       }
     }
