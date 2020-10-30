@@ -17,16 +17,28 @@ variable "tfc_url" {
 variable "agent_log_level" {
   type        = string
   default     = "error"
-  description = "Available log levels are info, error, warn, debug, and trace"
+  description = "Available log levels are info, error, warn, debug, and trace. Defaults to error."
 }
 
 variable "agent_disable_update" {
   type        = bool
   default     = true
-  description = "Agents will self-update if set to false"
+  description = "Agents will self-update if set to false. Defaults to true."
 }
 
 variable "namespace" {
   type        = string
   description = "The namespace to deploy the agent into.  The namespace must already exist."
+}
+
+variable "cluster_access" {
+  type        = bool
+  default     = false
+  description = "When true, provides the agent access to the cluster to manage Kubernetes resources. Defaults to false."
+}
+
+variable "create_namespace" {
+  type        = bool
+  default     = false
+  description = "When true, creates the namespace for the Terraform Cloud Agent. Defaults to false"
 }
