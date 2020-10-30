@@ -9,7 +9,7 @@ A Terraform module for deploying the Terraform Cloud for Business Agent in Kuber
 
 **agent_token_secret**: The TFC agent token secret generated when the agent was created.
 
-**:namespace**:: The namespace to deploy the agent into.  The namespace must already exist.
+**namespace**: The namespace to deploy the agent into.  The namespace must already exist.
 
 ### Optional
 **tfc_url**: The Terraform Cloud endpoint.  Must be changed if using Terraform Enterprise.
