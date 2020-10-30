@@ -5,7 +5,7 @@ A Terraform module for deploying the Terraform Cloud for Business Agent in Kuber
 
 ## Inputs
 ### Required
-**agent_token_name**: The TFC agent token description defined in TFC at app/<org>/settings/agents.
+**agent_token_name**: The TFC agent token description defined in TFC at app/\<org>/settings/agents.
 
 **agent_token_secret**: The TFC agent token secret generated when the agent was created.
 
