@@ -27,7 +27,7 @@ A Terraform module for deploying the Terraform Cloud for Business Agent in Kuber
 provider "kubernetes" {}
 
 module "terraform-cloud-agent-kubernetes" {
-  source  = "github.com/redeux/terraform-cloud-agent-kubernetes"
+  source  = "redeux/terraform-cloud-agent/kubernetes"
   version = "0.0.1"
 
   namespace          = "terraform-cloud-agent"
