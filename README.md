@@ -1,7 +1,7 @@
 # terraform-cloud-agent-kubernetes
 A Terraform module for deploying the Terraform Cloud for Business Agent in Kubernetes
 
-**Note**: This is a community and module is not supported by HashiCorp.
+**Note**: This is a community module and is not supported by HashiCorp.
 
 ## Inputs
 ### Required
