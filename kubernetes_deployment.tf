@@ -11,7 +11,7 @@ resource "kubernetes_deployment" "tfc_agent" {
   }
 
   spec {
-    replicas = 1
+    replicas = var.agent_replicacount
 
     selector {
       match_labels = {
@@ -24,7 +24,7 @@ resource "kubernetes_deployment" "tfc_agent" {
       metadata {
         labels = {
           "app.kubernetes.io/name"           = "terraform-cloud-agent"
-          "app.kubernetes.io/version"        = local.version
+          "app.kubernetes.io/version"        = var.agent_version
           "app.kubernetes.io/module-version" = local.module-version
           "app.kubernetes.io/managed-by"     = "terraform"
         }
@@ -32,7 +32,7 @@ resource "kubernetes_deployment" "tfc_agent" {
 
       spec {
         container {
-          image = "hashicorp/tfc-agent:${local.version}"
+          image = "${var.agent_image}:${var.agent_version}"
           name  = "terraform-cloud-agent"
 
           #   resources {

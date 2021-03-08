@@ -11,8 +11,8 @@ module "terraform-cloud-agent-kubernetes" {
 
   namespace          = "terraform-cloud-agent"
   create_namespace   = true
-  agent_token_name   = "example-agent"
-  agent_token_secret = "myagent.atlasv1.secrettoken"
+  agent_name   = "example-agent"
+  agent_token        = "myagent.atlasv1.secrettoken"
   cluster_access     = true
 }
 ```
