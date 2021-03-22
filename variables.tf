@@ -52,13 +52,13 @@ variable "create_namespace" {
 
 variable "limits_cpu" {
   type        = string
-  default     = "1000m"
+  default     = "1"
   description = "CPU hard limits."
 }
 
 variable "limits_memory" {
   type        = string
-  default     = "1Gb"
+  default     = "250Mi"
   description = "Memory hard limits."
 }
 
@@ -69,13 +69,13 @@ variable "namespace" {
 
 variable "requests_cpu" {
   type        = string
-  default     = "1"
+  default     = "250m"
   description = "CPU requests."
 }
 
 variable "requests_memory" {
   type        = string
-  default     = "1Gb"
+  default     = "50Mi"
   description = "Memory requests."
 }
 
