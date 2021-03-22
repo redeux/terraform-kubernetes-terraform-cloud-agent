@@ -58,7 +58,7 @@ variable "limits_cpu" {
 
 variable "limits_memory" {
   type        = string
-  default     = "250Mi"
+  default     = "2Gi"
   description = "Memory hard limits."
 }
 
@@ -69,13 +69,13 @@ variable "namespace" {
 
 variable "requests_cpu" {
   type        = string
-  default     = "250m"
+  default     = "500m"
   description = "CPU requests."
 }
 
 variable "requests_memory" {
   type        = string
-  default     = "50Mi"
+  default     = "250Mi"
   description = "Memory requests."
 }
 
