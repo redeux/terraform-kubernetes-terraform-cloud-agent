@@ -34,16 +34,6 @@ resource "kubernetes_deployment" "tfc_agent" {
         container {
           image = "${var.agent_image}:${var.agent_version}"
           name  = "terraform-cloud-agent"
-          resources {
-            requests = {
-              cpu    = var.requests_cpu
-              memory = var.requests_memory
-            }
-            limits = {
-              cpu    = var.limits_cpu
-              memory = var.limits_memory
-            }
-          }
           env {
             name = "TFC_AGENT_TOKEN"
             value_from {
@@ -91,6 +81,16 @@ resource "kubernetes_deployment" "tfc_agent" {
                 name = kubernetes_config_map.tfc_agent_configuration.metadata[0].name
                 key  = "disable-update"
               }
+            }
+          }
+          resources {
+            requests = {
+              cpu    = var.requests_cpu
+              memory = var.requests_memory
+            }
+            limits = {
+              cpu    = var.limits_cpu
+              memory = var.limits_memory
             }
           }
         }
