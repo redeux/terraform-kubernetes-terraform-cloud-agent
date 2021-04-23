@@ -1,7 +1,7 @@
 locals {
-  module-version = "0.0.4"
+  module-version = "0.0.5"
 }
 
 terraform {
-  required_version = ">= 0.12"
+  required_version = ">= 0.14"
 }
