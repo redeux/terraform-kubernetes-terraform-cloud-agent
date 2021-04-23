@@ -12,8 +12,8 @@ resource "kubernetes_cluster_role" "tfc_agent_role" {
   }
 
   rule {
-    api_groups = ["", "apps", "autoscaling", "batch", "extensions", "policy", "rbac.authorization.k8s.io"]
-    resources  = ["componentstatuses", "configmaps", "daemonsets", "deployments", "events", "endpoints", "horizontalpodautoscalers", "ingress", "jobs", "limitranges", "namespaces", "nodes", "pods", "persistentvolumes", "persistentvolumeclaims", "resourcequotas", "replicasets", "replicationcontrollers", "serviceaccounts", "services"]
+    api_groups = ["", "apps", "autoscaling", "batch", "extensions", "policy", "rbac.authorization.k8s.io", "cilium.io"]
+    resources  = ["componentstatuses", "configmaps", "daemonsets", "deployments", "events", "endpoints", "horizontalpodautoscalers", "ingress", "jobs", "limitranges", "namespaces", "nodes", "pods", "persistentvolumes", "persistentvolumeclaims", "resourcequotas", "replicasets", "replicationcontrollers", "serviceaccounts", "services", "ciliumnetworkpolicies", "ciliumclusterwidenetworkpolicies"]
     verbs      = ["*"]
   }
 }
