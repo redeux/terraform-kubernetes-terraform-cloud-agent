@@ -21,7 +21,7 @@ variable "agent_name" {
   description = "The TFC agent token description defined in TFC at app/<org>/settings/agents."
 }
 
-variable "agent_replicacount" {
+variable "agent_replicas" {
   type        = number
   default     = 1
   description = "Replicacount of the terraform cloud agent deployment."

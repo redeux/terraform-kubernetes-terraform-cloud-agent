@@ -11,7 +11,7 @@ resource "kubernetes_deployment" "tfc_agent" {
   }
 
   spec {
-    replicas = var.agent_replicacount
+    replicas = var.agent_replicas
 
     selector {
       match_labels = {
