@@ -30,6 +30,7 @@ variable "agent_replicas" {
 variable "agent_token" {
   type        = string
   description = "The TFC agent token generated when the agent was created."
+  sensitive   = true
 }
 
 variable "agent_version" {
@@ -42,6 +43,18 @@ variable "cluster_access" {
   type        = bool
   default     = false
   description = "When true, provides the agent access to the cluster to manage Kubernetes resources."
+}
+
+variable "cluster_access_rbac_api_groups" {
+  type        = string
+  default     = null
+  description = "Additional rbac api groups for the rbac role"
+}
+
+variable "cluster_access_rbac_resources" {
+  type        = string
+  default     = null
+  description = "Additional rbac resources for the rbac role"
 }
 
 variable "create_namespace" {
