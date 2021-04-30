@@ -65,7 +65,7 @@ variable "create_namespace" {
 
 variable "limits_cpu" {
   type        = string
-  default     = "1"
+  default     = "2"
   description = "CPU hard limits."
 }
 
