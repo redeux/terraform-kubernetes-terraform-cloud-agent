@@ -11,6 +11,6 @@ resource "kubernetes_secret" "tfc_agent_token" {
   }
 
   data = {
-    "token" = var.agent_token_secret
+    "token" = var.agent_token
   }
 }
