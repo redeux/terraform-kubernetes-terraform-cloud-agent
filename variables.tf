@@ -46,13 +46,13 @@ variable "cluster_access" {
 }
 
 variable "cluster_access_rbac_api_groups" {
-  type        = string
+  type        = list(string)
   default     = null
   description = "Additional rbac api groups for the rbac role"
 }
 
 variable "cluster_access_rbac_resources" {
-  type        = string
+  type        = list(string)
   default     = null
   description = "Additional rbac resources for the rbac role"
 }
