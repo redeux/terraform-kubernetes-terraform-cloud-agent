@@ -11,9 +11,9 @@ resource "kubernetes_config_map" "tfc_agent_configuration" {
   }
 
   data = {
-    name           = var.agent_name
-    url            = var.tfc_url
-    log-level      = var.agent_log_level
-    disable-update = tostring(var.agent_disable_update)
+    name              = var.agent_name
+    url               = var.tfc_url
+    log-level         = var.agent_log_level
+    agent_auto_update = tostring(var.agent_auto_update)
   }
 }

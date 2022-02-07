@@ -1,7 +1,11 @@
-variable "agent_disable_update" {
-  type        = bool
-  default     = true
-  description = "Agents will self-update if set to false."
+variable "agent_auto_update" {
+  type        = string
+  default     = "minor"
+  description = "By default, the agent will automatically update itself to the latest minor version"
+  validation {
+    condition     = contains(["disabled", "minor", "patch"], var.agent_auto_update)
+    error_message = "Defaults to minor, must be one of *disabled*, *minor*, or *patch*."
+  }
 }
 
 variable "agent_image" {
