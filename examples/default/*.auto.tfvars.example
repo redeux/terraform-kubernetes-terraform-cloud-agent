@@ -1,9 +1,9 @@
-agent_disable_update           = true
+agent_auto_update              = "minor"
 agent_image                    = "hashicorp/tfc-agent"
 agent_log_level                = "error"
 agent_name                     = null
 agent_replicas                 = 1
-#agent_token                    = "<token>"
+agent_token                    = null
 agent_version                  = "latest"
 cluster_access                 = false
 cluster_access_rbac_api_groups = []
