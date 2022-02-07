@@ -78,7 +78,7 @@ resource "kubernetes_deployment" "tfc_agent" {
             value_from {
               config_map_key_ref {
                 name = kubernetes_config_map.tfc_agent_configuration.metadata[0].name
-                key  = "disable-update"
+                key  = "agent-auto-update"
               }
             }
           }
