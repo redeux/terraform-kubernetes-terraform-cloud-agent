@@ -16,6 +16,8 @@ module "terraform-cloud-agent-kubernetes" {
   cluster_access     = true
 }
 ```
+
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -49,7 +51,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_agent_disable_update"></a> [agent\_disable\_update](#input\_agent\_disable\_update) | Agents will self-update if set to false. | `bool` | `true` | no |
+| <a name="input_agent_auto_update"></a> [agent\_auto\_update](#input\_agent\_auto\_update) | By default, the agent will automatically update itself to the latest minor version | `string` | `"minor"` | no |
 | <a name="input_agent_image"></a> [agent\_image](#input\_agent\_image) | Name of the Terraform Cloud Agent docker image. | `string` | `"hashicorp/tfc-agent"` | no |
 | <a name="input_agent_log_level"></a> [agent\_log\_level](#input\_agent\_log\_level) | Available log levels are info, error, warn, debug, and trace. | `string` | `"error"` | no |
 | <a name="input_agent_name"></a> [agent\_name](#input\_agent\_name) | The TFC agent token description defined in TFC at app/<org>/settings/agents. | `string` | n/a | yes |
@@ -70,5 +72,6 @@ No modules.
 ## Outputs
 
 No outputs.
+<!-- END_TF_DOCS -->
 
 **Note**: This is a community module and is not supported by HashiCorp.
