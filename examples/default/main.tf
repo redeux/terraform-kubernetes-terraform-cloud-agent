@@ -8,6 +8,4 @@ module "terraform-cloud-agent-kubernetes" {
   agent_name       = "example-agent"
   agent_token      = var.agent_token
   cluster_access   = true
-  agent_version    = var.agent_version
-
 }
