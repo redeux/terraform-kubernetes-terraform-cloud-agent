@@ -1,0 +1,17 @@
+agent_auto_update              = "minor"
+agent_image                    = "hashicorp/tfc-agent"
+agent_log_level                = "error"
+agent_name                     = null
+agent_replicas                 = 1
+agent_token                    = null
+agent_version                  = "latest"
+cluster_access                 = false
+cluster_access_rbac_api_groups = []
+cluster_access_rbac_resources  = []
+create_namespace               = false
+limits_cpu                     = "2"
+limits_memory                  = "2Gi"
+namespace                      = null
+requests_cpu                   = "500m"
+requests_memory                = "250Mi"
+tfc_url                        = "https://app.terraform.io"
