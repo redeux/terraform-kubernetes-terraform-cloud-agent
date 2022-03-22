@@ -1,3 +1,8 @@
+## 1.0.1 (March 22, 2022)
+
+BUG FIXES:
+* Fixed an issue with a filename in the example that prevented the module from downloading on Microsoft Windows (#9)
+
 ## 1.0.0 (March 14, 2022)
 
 BREAKING CHANGES:
