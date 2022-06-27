@@ -102,8 +102,8 @@ variable "tfc_url" {
   description = "The Terraform Cloud endpoint.  Must be changed if using Terraform Enterprise."
 }
 
-variable "annotations" {
-  description = "Add annotations for service accounts"
+variable "service_account_annotations" {
+  description = "Add annotations for IAM roles on the service accounts (irsa)"
   type        = map(string)
   default     = {}
 }

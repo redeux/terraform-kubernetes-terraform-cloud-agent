@@ -9,6 +9,6 @@ resource "kubernetes_service_account" "tfc_agent_service_account" {
     }
     name        = "terraform-cloud-agent"
     namespace   = var.create_namespace ? kubernetes_namespace.tfc_agent_namespace[0].metadata[0].name : var.namespace
-    annotations = var.annotations 
+    annotations = var.service_account_annotations 
   }
 }

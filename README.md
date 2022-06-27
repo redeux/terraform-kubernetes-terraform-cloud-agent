@@ -68,6 +68,7 @@ No modules.
 | <a name="input_requests_cpu"></a> [requests\_cpu](#input\_requests\_cpu) | CPU requests. | `string` | `"500m"` | no |
 | <a name="input_requests_memory"></a> [requests\_memory](#input\_requests\_memory) | Memory requests. | `string` | `"250Mi"` | no |
 | <a name="input_tfc_url"></a> [tfc\_url](#input\_tfc\_url) | The Terraform Cloud endpoint.  Must be changed if using Terraform Enterprise. | `string` | `"https://app.terraform.io"` | no |
+| <a name="service_account_annotations"></a> [service\_account\_annotations](#input\_service\_account\_annotations) | Can add annotations for IAM roles on the service accounts (irsa) or other annotations for K8's | `map(string)` | `{}` | no |
 
 ## Outputs
 
