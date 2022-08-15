@@ -103,7 +103,7 @@ variable "tfc_url" {
 }
 
 variable "service_account_annotations" {
-  description = "Add annotations for IAM roles on the service accounts (irsa)"
+  description = "Annotations to add to the Kubernetes service account. Can be used to annotate the IRSA."
   type        = map(string)
   default     = {}
 }
