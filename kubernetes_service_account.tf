@@ -3,7 +3,7 @@ resource "kubernetes_service_account" "tfc_agent_service_account" {
 
   metadata {
     labels = {
-      "app.kubernetes.io/name"           = var.service_account_name
+      "app.kubernetes.io/name"           = "terraform-cloud-agent"
       "app.kubernetes.io/module-version" = local.module-version
       "app.kubernetes.io/managed-by"     = "terraform"
     }
