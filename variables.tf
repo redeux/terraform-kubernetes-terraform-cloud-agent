@@ -102,3 +102,14 @@ variable "tfc_url" {
   description = "The Terraform Cloud endpoint.  Must be changed if using Terraform Enterprise."
 }
 
+variable "service_account_name" {
+  type        = string
+  default     = "terraform-cloud-agent"
+  description = "Name of the service account."
+}
+
+variable "service_account_annotations" {
+  type        = map(string)
+  default     = {}
+  description = "Annotations to add to the Kubernetes service account. Can be used to annotate the IRSA."
+}
